@@ -4,5 +4,12 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color:darkturquoise;
+  text-decoration:none;
+  font-weight:bold;
+
+}
+.navi {
+  display:inline;
+  padding-right:1em;
 }

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1= 'Amount of species found in Helsinki'
+    ul
+        each entry in species
+            li= entry.type + ': ' + entry.amount
+

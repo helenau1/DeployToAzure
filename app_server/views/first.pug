@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= 'Nature trails in Helsinki'
+    p Place/What to see
+    ul
+        each entry in trails
+            li= entry.name + '/' + entry.type
+

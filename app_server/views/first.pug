@@ -1,14 +1,9 @@
 extends layout
 
 block content
-    .container
-        .row
-            .col-sm-4(style='padding-left:0;')
-                img.img-fluid(src='images/nature2.png', alt='sea')
-            .col-sm-8(style="padding-top:5em;")
-                h1= 'Nature trails in Helsinki'
-                p Place/What to see
-                ul
-                    each entry in trails
-                        li= entry.name + '/' + entry.type
+    h1= 'Nature trails in Helsinki'
+    p Place/What to see
+    ul
+        each entry in trails
+            li= entry.name + '/' + entry.type
 

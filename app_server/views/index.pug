@@ -1,5 +1,10 @@
 extends layout
 
 block content
-  h1= 'Welcome!'
-  p On this page you can find information about the natural sites and different species in Helsinki area.
+    .container
+        .row
+            .col-sm-4(style='padding-left:0;')
+                img.img-fluid(src='images/nature1.png', alt='winter')
+            .col-sm-8(style="padding-top:5em;")
+                h1= 'Welcome!'
+                p On this page you can find information about the natural sites and different species in Helsinki area.

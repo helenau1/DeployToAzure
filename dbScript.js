@@ -1,4 +1,4 @@
-//creating the database for trails
+//creating the collection for trails to be added to the database
 db.trails.save(
 [
 {name:'Uutela', type:'Forest and sea'},
@@ -11,7 +11,7 @@ db.trails.save(
 ]
 );
 
-//creating the database for species
+//creating the collection for species to be added to the database
 
 db.species.save(
 [

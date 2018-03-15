@@ -6,7 +6,7 @@ const ctrlSecond = require('../controllers/ctrlSecond'); //for the second page
 
 /* GET home page. */
 router.get('/', ctrlMain.index); //getting homepage
-router.get('/first', ctrlFirst.dataset1);
-router.get('/second', ctrlSecond.dataset2);
+router.get('/trails', ctrlFirst.dataset1);
+router.get('/species', ctrlSecond.dataset2);
 
 module.exports = router;

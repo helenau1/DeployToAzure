@@ -1,5 +1,5 @@
 const dataset1 = function(req, res){
-    res.render('first',{
+    res.render('trails',{
         trails:
             [
                 {name:'Uutela', type:'Forest and sea'},

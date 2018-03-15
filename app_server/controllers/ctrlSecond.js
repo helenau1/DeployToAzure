@@ -1,5 +1,5 @@
 const dataset2 = function(req, res){
-    res.render('second',{
+    res.render('species',{
         species:
             [
                 {type:'Plants', amount:'1100'},

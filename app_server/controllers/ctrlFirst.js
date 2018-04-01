@@ -1,16 +1,33 @@
-const dataset1 = function(req, res){
-    res.render('trails',{
-        trails:
-            [
-                {name:'Uutela', type:'Forest and sea'},
-                {name:'Kivinokka', type:'Forest and birds'},
-                {name:'Maunula', type:'Forest'},
-                {name:'Viikki', type:'Forest, birds and sea'},
-                {name:'Haltiala', type:'Forest'},
-                {name:'Pihlajasaari', type:'Island'},
-                {name:'Luukkaa', type:'Forest and lake'}
-            ]});
+const request = require('request');
+const apiURL = require('./apiURLs');
+
+const dataset1 = function(req, res) {
+    const path = '/api/trails';
+    const requestOptions = {
+        url: apiURL.server + path,
+        method: 'GET',
+        json: {},
+        qs: {}
+    };
+
+request(
+    requestOptions,
+    function (err, response, body){
+    if(err) {
+        res.render('error', {message: err.message});
+    } else if(response.statusCode !==200) {
+        res.render('error', {message:'Error accessing API: ' + response.statusMessage + " (" + response.statusCode + ") "});
+    } else if(!(body instanceof Array)) {
+    res.render('error', {message: 'Unexpected response data'});
+    } else if (!body.length){
+    res.render('error', {message: 'No documents in collection'});
+    } else {
+    res.render('trails', {trails: body});
+        }
+    }
+);
 };
+
 module.exports = {
     dataset1
 };

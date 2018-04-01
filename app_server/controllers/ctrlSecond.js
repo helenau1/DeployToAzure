@@ -1,15 +1,33 @@
-const dataset2 = function(req, res){
-    res.render('species',{
-        species:
-            [
-                {type:'Plants', amount:'1100'},
-                {type:'Birds', amount:'120'},
-                {type:'Mammals', amount:'46'},
-                {type:'Reptiles and amphibians', amount:'4'}
+const request = require('request');
+const apiURL = require('./apiURLs');
 
-            ]});
+const dataset2 = function(req, res) {
+    const path = '/api/species';
+    const requestOptions = {
+        url: apiURL.server + path,
+        method: 'GET',
+        json: {},
+        qs: {}
+    };
+
+    request(
+        requestOptions,
+        function (err, response, body){
+            if(err) {
+                res.render('error', {message: err.message});
+            } else if(response.statusCode !==200) {
+                res.render('error', {message:'Error accessing API: ' + response.statusMessage + " (" + response.statusCode + ") "});
+            } else if(!(body instanceof Array)) {
+                res.render('error', {message: 'Unexpected response data'});
+            } else if (!body.length){
+                res.render('error', {message: 'No documents in collection'});
+            } else {
+                res.render('species', {species: body});
+            }
+        }
+    );
 };
 
 module.exports = {
     dataset2
-};
+}

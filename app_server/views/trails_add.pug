@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .row(style="padding:5em; padding-bottom:1em;")
+        h4 Add a new trail
+    form(action="", method="post", style="padding-left:5em;")
+        .form-group.row
+            label Name
+                input.form-control(name="name")
+        .form-group.row
+            label Nature type
+                input.form-control(name="type")
+        .form-group.row
+            button.btn-primary Add

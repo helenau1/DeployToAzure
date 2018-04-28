@@ -9,4 +9,9 @@ router.get('/', ctrlMain.index); //getting homepage
 router.get('/trails', ctrlFirst.dataset1);
 router.get('/species', ctrlSecond.dataset2);
 
+router
+    .route('/trails/add')
+    .get(ctrlFirst.showForm)
+    .post(ctrlFirst.addData);
+
 module.exports = router;

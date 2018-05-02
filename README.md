@@ -1,6 +1,6 @@
 This app was created as part of Web app development with MEAN course at the Laurea University of Applied sciences. Pictures of the UI can be found from the folder ImagesOfTheUI. </br>
 </br>
-The tasks included:
+The tasks for the course included:
 </br></br>
 Task 1 Simple Node.js server for testing purposes </br>
 Task 2 Express routing </br>

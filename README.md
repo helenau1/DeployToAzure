@@ -1,4 +1,5 @@
-This app was created as part of Web app development with MEAN course at the Laurea University of Applied sciences. The tasks included:
+This app was created as part of Web app development with MEAN course at the Laurea University of Applied sciences. </br>
+The tasks included:
 </br>
 Task 1 Simple Node.js server for testing purposes </br>
 Task 2 Express routing </br>

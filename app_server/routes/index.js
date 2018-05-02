@@ -14,4 +14,9 @@ router
     .get(ctrlFirst.showForm)
     .post(ctrlFirst.addData);
 
+router
+    .route('/species/add')
+    .get(ctrlSecond.showForm)
+    .post(ctrlSecond.addData);
+
 module.exports = router;

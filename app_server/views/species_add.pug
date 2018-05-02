@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    .row(style="padding:5em; padding-bottom:1em;")
+        h4 Add new sightings
+    form(action="", method="post", style="padding-left:5em;")
+        .form-group.row
+            label Place
+                input.form-control(name="Place")
+        .form-group.row
+            label Number of new plant sightings
+                input.form-control(name="Plants")
+        .form-group.row
+            label Number of new bird sightings
+                input.form-control(name="Birds")
+        .form-group.row
+            label Number of new mammal sightings
+                input.form-control(name="Mammals")
+        .form-group.row
+            button.btn-primary Add

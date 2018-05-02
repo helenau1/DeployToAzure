@@ -7,7 +7,13 @@ block content
                 img.img-fluid(src='images/nature3.png', alt='heron')
             .col-sm-8(style="padding-top:5em;")
                 h1= 'Amount of species found in Helsinki'
-                ul
+                p In Helsinki there are about 1100 species of plants, 120 species of birds and 46 species of mammals. Reptiles and amphibians are rare. There are only 11 species in Finland and 4 of them are found in Helsinki. The amount of insects is unknown.
+
+                a(style="font-weight:bold; font-size:1.2em;" href='/species/add') Add your own sightings:
+
+                ul(style="margin-top:1.5em;")
                     each entry in species
-                        li= entry.type + ': ' + entry.amount
+                        li= entry.Place + ': Plants ' + entry.Plants + ', Birds '+ entry.Birds + ', Mammals ' + entry.Mammals
+
+
 
